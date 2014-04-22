@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -9,7 +12,7 @@ int main()
     char one[100]= "field";
     char two[100]= "forest";
     char three[100]= "mountains";
-    char four[100]= "desert";
+    char four[100]= "boss room";
     int topleft= rand() % 4;
     int topmid= rand() % 4;
     int topright= rand() % 4;
@@ -19,12 +22,328 @@ int main()
     int bottommid= rand() % 4;
     int bottomright= rand() % 4;
     int choice;
+    char jdn[100]= "1";
+    char dw[100]="2";
+    char trzy[100]="3";
+    char cztry[100]="4";
+    char szsc[100]="6";
+    char sdm[100]="7";
+    char osm[100]="8";
+    char dzwc[100]="9";
 
-    printf("///////////////////////////////\n");
-    printf("      1     2     3");
-    printf("\n      4     5     6");
-    printf("\n      7     8     9\n");
-    printf("///////////////////////////////\n");
+     HANDLE h = GetStdHandle ( STD_OUTPUT_HANDLE );
+  WORD wOldColorAttrs;
+  CONSOLE_SCREEN_BUFFER_INFO csbiInfo;
+  GetConsoleScreenBufferInfo(h, &csbiInfo);
+  wOldColorAttrs = csbiInfo.wAttributes;
+
+  printf("\n///////////////////////////\n");
+
+   if (topleft== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", jdn);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (topleft== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", jdn);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (topleft== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", jdn);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (topleft== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", jdn);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (topleft== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", jdn);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (topmid== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", dw);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (topmid== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", dw);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (topmid== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", dw);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (topmid== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", dw);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (topmid== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", dw);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+        if (topright== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", trzy);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (topright== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", trzy);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (topright== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", trzy);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (topright== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", trzy);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (topright== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", trzy);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+    printf("\n\n");
+            if (midleft== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("\n      %s", cztry);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (midleft== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", cztry);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (midleft== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", cztry);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (midleft== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", cztry);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (midleft== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", cztry);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+    printf("      O");
+
+                if (midright== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", szsc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (midright== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", szsc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (midright== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", szsc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (midright== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", szsc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (midright== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", szsc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    printf("\n\n");
+
+                    if (bottomleft== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", sdm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (bottomleft== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", sdm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (bottomleft== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", sdm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (bottomleft== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", sdm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (bottomleft== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", sdm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+                        if (bottommid== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", osm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (bottommid== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", osm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (bottommid== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", osm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (bottommid== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", osm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (bottommid== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", osm);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+                            if (bottomright== 0)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", dzwc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (bottomright== 1)
+    {
+         SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", dzwc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (bottomright== 2)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", dzwc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+
+    }
+
+    if (bottomright== 3)
+    {
+        SetConsoleTextAttribute ( h,FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+         printf("      %s", dzwc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+
+    if (bottomright== 4)
+    {
+        SetConsoleTextAttribute ( h, FOREGROUND_RED | FOREGROUND_INTENSITY );
+         printf("      %s", dzwc);
+         SetConsoleTextAttribute ( h, wOldColorAttrs);
+    }
+    printf("\n///////////////////////////");
+    printf("\n\n");
+
+
+
+
+
 
     scanf("%d",&choice);
 
