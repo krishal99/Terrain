@@ -7,6 +7,8 @@ void terrainGenerate(int terrain[9]);
 
 void main()
 {
+    printf("This for the sake of saving the default colour.\n\n", saveDefaultColor());
+    
     time_t t;
     srand((unsigned) time(&t));
 
@@ -43,8 +45,7 @@ void terrainDraw(int terrain[9])
         printf("%i\t", i+1);
     }
     printf("\n\n");
-    setColor(7);
-
+    resetColor();
 }
 
 void colorDecide(colour)
