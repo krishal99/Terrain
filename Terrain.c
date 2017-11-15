@@ -7,6 +7,7 @@ void terrainGenerate(int terrain[9]);
 
 void main()
 {
+    system("cls");
     printf("This for the sake of saving the default colour.\n\n", saveDefaultColor());
     
     time_t t;
@@ -15,6 +16,8 @@ void main()
     int terrain[9];
     terrainGenerate(terrain);
     terrainDraw(terrain);
+    getchar();
+    main();
 }
 
 void terrainGenerate(int terrain[9])
