@@ -1,10 +1,10 @@
 void travel(int choice)
 {
-    switch (choice)
+    switch (choice)//switch based on the int choice
     {
         case 1:
         printf("\nYou choose to travel to ");
-        setColor(11);
+        setColor(11);//calls upon rlutil function
         printf("Island.\n\n");
         resetColor();
         break;
@@ -47,6 +47,6 @@ void travel(int choice)
         printf("\n Not recognised");
         break;
     }
-    getch();
+    getch();//small pause to allow user to read; future expansion into combat etc would probably be here
     main();
 }
