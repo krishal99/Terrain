@@ -3,13 +3,18 @@
 #include "rlutil.h"
 #include "terrain.h"
 #include "travel.h"
-
+#include "stats.h"
+#include "setup.h"
+void init();
 void terrainDraw(int terrain[9]);
 void terrainGenerate(int terrain[9]);
-
 void main()
 {
-    printf("Choose Terrain.\n\n", saveDefaultColor());//will be intro maybe, for now just to get colour
+    setup();
+}
+void init()
+{
+    printf("Choose Terrain.\n\n");//will be intro maybe, for now just to get colour
     
     time_t t;
     srand(time(NULL));//initialise the pathetic generator, I'll make something better maybe some time
