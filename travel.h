@@ -48,5 +48,5 @@ void travel(int choice)
         break;
     }
     getch();//small pause to allow user to read; future expansion into combat etc would probably be here
-    main();
+    init();
 }
