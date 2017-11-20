@@ -5,9 +5,12 @@
 #include "travel.h"
 #include "stats.h"
 #include "setup.h"
+#include "eventgen.h"
+
 void init();
 void terrainDraw(int terrain[9]);
 void terrainGenerate(int terrain[9]);
+void eventgen();
 void main()
 {
     setup();
