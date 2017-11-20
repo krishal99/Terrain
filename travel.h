@@ -47,6 +47,7 @@ void travel(int choice)
         printf("\n Not recognised");
         break;
     }
-    getch();//small pause to allow user to read; future expansion into combat etc would probably be here
+    getch();
+    eventgen();//small pause to allow user to read; then into event randomizer
     init();
 }
