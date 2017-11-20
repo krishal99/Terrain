@@ -5,8 +5,8 @@ void setup()
     printf("Choose a name:\n", saveDefaultColor());
     scanf("%s", &player1.name);
     printf("\n\nOkay, %s, you are granted 20 points to divide between Attack, \nDefence and Health.", player1.name);
-    getchar();
-    printf("\nLet's start with the Attack stat. How many points into Attack?\n");
+    getch();
+    printf("\n\nLet's start with the Attack stat. How many points into Attack?\n");
     scanf("%i", &player1.atk);
     player1.spts = 20 - player1.atk;
     printf("\nNow for the Defence stat:\n");
