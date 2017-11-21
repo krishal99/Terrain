@@ -12,7 +12,7 @@ void load()
     printf("\nFile load successful!");
     getch();
     resetColor();
-    fscanf(fptr, "%s %i %i %i %i %i", &player1.atk, &player1.def, &player1.hp, &player1.lvl, &player1.spts);
+    fscanf(fptr, "%s %i %i %i %i %i", &player1.name, &player1.atk, &player1.def, &player1.hp, &player1.lvl, &player1.spts);
     fclose(fptr);
     }
     
