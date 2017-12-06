@@ -6,11 +6,17 @@
 #include "stats.h"
 #include "setup.h"
 #include "eventgen.h"
-
+#include "saveload.h"
+#include "mobgen.h"      
 void init();
+void save();
+void load();
+void setup();
+void setup2();
 void terrainDraw(int terrain[9]);
 void terrainGenerate(int terrain[9]);
-void eventgen();
+void eventgen(int choice);
+void mobtype(int terrain);
 void main()
 {
     setup();
@@ -28,6 +34,8 @@ void init()
     int choice;
     printf("\n\n");
     scanf("\n%i", &choice);
+    //mobgenhere
+    //mobtype(terrain[choice-1]);
     travel(terrain[choice-1]);//to the identifier function
 }
 
