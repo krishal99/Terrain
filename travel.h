@@ -40,14 +40,15 @@ void travel(int choice)
         case 6:
         printf("\nYou choose to travel to ");
         setColor(8);
-        printf("Something.\n\n");
-        resetColor();        break;
+        printf("Desolated Plains.\n\n");
+        resetColor();        
+        break;
         
         default:
         printf("\n Not recognised");
         break;
     }
     getch();
-    eventgen();//small pause to allow user to read; then into event randomizer
+    eventgen(choice);//small pause to allow user to read; then into event randomizer
     init();
 }
