@@ -8,8 +8,8 @@ void terrainGenerate(int terrain[9])
 
 void terrainDraw(int terrain[9])
 {
-    system("cls");
-    printf("Choose Terrain.\n\n", saveDefaultColor());//will be intro maybe, for now just to get colour
+    cls();
+    printf("Choose Terrain.\n\n");//will be intro maybe, for now just to get colour
     for (int i=0; i < 3; i++)   
     {
         colorDecide(terrain[i]);
@@ -56,7 +56,7 @@ void colorDecide(colour)//pretty self explanatory
         break;
         
         case 6:
-        setColor(8);//fuck knows
+        setColor(8);//desolated plains
         break;
     }
 }
