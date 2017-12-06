@@ -1,23 +1,23 @@
 struct playerStats player1;
 void setup()
 {
-    int choice;
-    printf("Would you like to load a previous save (y or n)?\n", saveDefaultColor());
-    scanf("%c", &choice);
+    char choice;
+    printf("Would you like to load a previous save (y or n)?\n", saveDefaultColor());//saves default color white
+    scanf(" %c", &choice);
     if (choice== 'y')
     {
         load();
         init();
     }
-    system("cls");
+    cls();
     printf("Choose a name:\n");
     scanf("%s", &player1.name);
     setup2();
 }
 void setup2()
 {
-    int choice;
-    system("cls");
+    char choice;
+    cls();
     printf("Okay, %s, you are granted 20 points to divide between Attack, \nDefence and Health.", player1.name);
     printf("\n\nLet's start with the Attack stat. How many points into Attack?\n");
     scanf("%i", &player1.atk);
