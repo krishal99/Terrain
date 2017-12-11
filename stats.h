@@ -7,5 +7,5 @@ struct playerStats
 struct enemyStats
 {
     char ename;
-    int ehp, edef, eatk, elvl;
+    int hp, def, atk, lvl;
 };
