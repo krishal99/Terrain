@@ -14,7 +14,7 @@ void mobtype(int terrain)
         break;
         
         case 3:
-        printf("\nNo forest mobs!");
+        mobgenmnt(terrain);
         break;
         
         case 4:
@@ -22,7 +22,7 @@ void mobtype(int terrain)
         break;
         
         case 5:
-        printf("\nNo swamp mobs!");
+        mobgenmnt(terrain);
         break;
         
         case 6:
@@ -88,19 +88,27 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
         printf("!\n");
         break;
     }
-    int chance = rand() % 100;
+    int chance = rand() % 10;
 
     switch (chance)
     {
     case 4:
+    setColor(12);
     printf("Powerful mob!\n");
+    resetColor();
+    mob1.atk = player1.atk*(rand() % 2+1);
+    mob1.def = player1.def/2;
+    mob1.hp = player1.hp/2;
     getch();
     break;
     
     default:
-    mob1.atk = player1.atk*(rand() % 2+1);
-    mob1.def = player1.def/2;
-    mob1.hp = player1.hp/2;
+    printf("Common mob!\n");
+    mob1.atk = player1.atk/(rand() % 3+2);
+    mob1.def = 0;
+    mob1.hp = rand() % 10+5;
+    getch();
+    break;
     }
     
     printf("\n\nAttack: %d\tDefence: %d\tHealth: %d", mob1.atk, mob1.def, mob1.hp);
