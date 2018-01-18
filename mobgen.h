@@ -37,12 +37,14 @@ void mobgenmnt(int terrain)
 char terraintype[7][50] = {"", "Island", "Mountain", "Forest", "Common", "Swamp", "Cursed"};
 int randomize = (rand() % 2+1);
 char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
-    switch (terrain)
+    switch (terrain) 
     {
         case 1:
         printf("\nYou were attacked by ");
         setColor(11);//island
         printf("%s %s", terraintype[terrain], typem[randomize]);
+        strcpy(mob1.tname, terraintype[terrain]);
+        strcpy(mob1.ename, typem[randomize]);
         resetColor();
         printf("!\n");
         break;
@@ -51,6 +53,8 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
         printf("\nYou were attacked by ");
         setColor(12);//mountain
         printf("%s %s", terraintype[terrain], typem[randomize]);
+        strcpy(mob1.tname, terraintype[terrain]);
+        strcpy(mob1.ename, typem[randomize]);
         resetColor();
         printf("!\n");
         break;
@@ -59,6 +63,8 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
         printf("\nYou were attacked by ");
         setColor(10);//forest
         printf("%s %s", terraintype[terrain], typem[randomize]);
+        strcpy(mob1.tname, terraintype[terrain]);
+        strcpy(mob1.ename, typem[randomize]);
         resetColor();
         printf("!\n");
         break;
@@ -67,6 +73,8 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
         printf("\nYou were attacked by ");
         setColor(14);//plains
         printf("%s %s", terraintype[terrain], typem[randomize]);
+        strcpy(mob1.tname, terraintype[terrain]);
+        strcpy(mob1.ename, typem[randomize]);
         resetColor();
         printf("!\n");
         break;        
@@ -75,6 +83,8 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
         printf("\nYou were attacked by ");
         setColor(6);//swamp
         printf("%s %s", terraintype[terrain], typem[randomize]);
+        strcpy(mob1.tname, terraintype[terrain]);
+        strcpy(mob1.ename, typem[randomize]);
         resetColor();
         printf("!\n");
         break;
@@ -84,6 +94,8 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
         printf("\nYou were attacked by ");
         setColor(8);//desolated plains
         printf("%s %s", terraintype[terrain], typem[randomize]);
+        strcpy(mob1.tname, terraintype[terrain]);
+        strcpy(mob1.ename, typem[randomize]);
         resetColor();
         printf("!\n");
         break;
@@ -106,10 +118,23 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
     printf("Common mob!\n");
     mob1.atk = player1.atk/(rand() % 3+2);
     mob1.def = 0;
-    mob1.hp = rand() % 10+5;
+    mob1.hp = rand() % 20+5;
     getch();
     break;
     }
     
-    printf("\n\nAttack: %d\tDefence: %d\tHealth: %d", mob1.atk, mob1.def, mob1.hp);
+    printf("\nAttack: %d\tDefence: %d\tHealth: %d", mob1.atk, mob1.def, mob1.hp);
+    printf("\n\nPlayer Stats\n\n");
+    printf("Attack: %d\tDefence: %d\tHealth: %d", player1.atk, player1.def, player1.hp);
+    printf("\nDo you engage (y or n) ");
+    char choice;
+    scanf(" %c", &choice);
+    if (choice == 'y')
+    {
+        cls();
+        getch();
+        battlemenu();
+        
+    }
+    
 }
