@@ -17,6 +17,7 @@ void setup()
 void setup2()
 {
     int atk, def, hp;
+    player1.lvl = 1;
     char choice;
     cls();
     printf("Okay, %s, you are granted ", player1.name);
