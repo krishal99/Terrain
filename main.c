@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "rlutil.h"
 #include "terrain.h"
 #include "travel.h"
@@ -7,7 +8,8 @@
 #include "setup.h"
 #include "eventgen.h"
 #include "saveload.h"
-#include "mobgen.h"      
+#include "mobgen.h"
+#include "combat.h"      
 void init();
 void save();
 void load();
@@ -17,6 +19,8 @@ void terrainDraw(int terrain[9]);
 void terrainGenerate(int terrain[9]);
 void eventgen(int choice);
 void mobtype(int terrain);
+void mobgenmnt(int terrain);
+
 void main()
 {
     setup();
