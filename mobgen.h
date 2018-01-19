@@ -26,7 +26,7 @@ void mobtype(int terrain)
         break;
         
         case 6:
-        printf("\nNo desolated plains mobs!");
+        bossgen();
         break;        
     }
     
@@ -35,8 +35,8 @@ void mobtype(int terrain)
 void mobgenmnt(int terrain)
 {
 char terraintype[7][50] = {"", "Island", "Mountain", "Forest", "Common", "Swamp", "Cursed"};
-int randomize = (rand() % 2+1);
-char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
+int randomize = (rand() % 4+1);
+char typem[5][50] = {"", "Goblin", "Bandit", "Spider", "Marauder"};
     switch (terrain) 
     {
         case 1:
@@ -124,8 +124,6 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
     }
     
     printf("\nAttack: %d\tDefence: %d\tHealth: %d", mob1.atk, mob1.def, mob1.hp);
-    printf("\n\nPlayer Stats\n\n");
-    printf("Attack: %d\tDefence: %d\tHealth: %d", player1.atk, player1.def, player1.hp);
     printf("\nDo you engage (y or n) ");
     char choice;
     scanf(" %c", &choice);
@@ -137,4 +135,53 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
         
     }
     
+}
+bossgen()
+{
+    char miniboss[4][100] = {"Shrek", "Jeff", "Rick", "Jason"};
+    int random =rand() % 20;
+    
+    switch (random)
+    {
+        case 5:
+        mob1.atk = 30;
+        mob1.def = 7;
+        strcpy(mob1.tname, "Boss");
+        strcpy(mob1.ename, miniboss[random]);
+        mob1.hp = 25;
+        cls();
+        printf("Boss %s appears! His stats are:\n", miniboss[1]);
+        printf("Attack: %i\tDefence: %i\tHealth: %i", mob1.atk, mob1.def, mob1.hp);
+        battlemenu();
+        break;
+        
+        case 7:
+        mob1.atk = 16;
+        mob1.def = 10;
+        strcpy(mob1.tname, "Boss");
+        strcpy(mob1.ename, miniboss[2]);
+        mob1.hp = 40;
+        cls();
+        printf("Boss %s appears! His stats are:\n\n", miniboss[2]);
+        printf("Attack: %i\tDefence: %i\tHealth: %i\n", mob1.atk, mob1.def, mob1.hp);
+        battlemenu();
+        break;
+        
+        case 13:
+        mob1.atk = 25;
+        mob1.def = 0;
+        strcpy(mob1.tname, "Boss");
+        strcpy(mob1.ename, miniboss[3]);
+        mob1.hp = 30;
+        cls();
+        printf("Boss %s appears! His stats are:\n\n", miniboss[3]);
+        printf("Attack: %i\tDefence: %i\tHealth: %i\n", mob1.atk, mob1.def, mob1.hp);
+        battlemenu();
+        break;
+        
+        default:
+        printf("\nYou travel the wasteland uninterruted.");
+        break;
+        
+    }
 }
