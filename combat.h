@@ -57,6 +57,7 @@ void matk(php, ehp)
     {
         setColor(12);
         printf("\n\nYou Died.");
+        savedel();
         resetColor();
     }
 }
