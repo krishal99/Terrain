@@ -2,6 +2,7 @@
     <h1>Terrain Generator</h1>
 </font>
 =======
+
 Small Terrain Generator, side project, will become part of a bigger one.
 Using the fantastic "rlutil" library.
 Hopefully will be easy to modify since I added some comments and removed all propriety windows commands like system("cls"), replaced with stuff from the rlutil library... also works on Linux now (tested on iBook G4 running Lubuntu 14.04).
