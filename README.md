@@ -14,4 +14,8 @@ After the battle system, I will start working on hard coded bosses and levelling
 
 This is more like a note to myself, but some sounds would be nice (a bwaah at a boss fight, something friendly in a village/ town etc). I'm assuming it'll have to be 8 bit but that has its own charm... damn I should really research this since I completely forgot about wanting to implement that.
 
+Status:
+
+19/01/2018 - The Terrain generator is fully complete, with a basic combat and mob generator system. Now, I'll work on adding better mobs, giving towns a purpose, and making an inventory system.
+
 
