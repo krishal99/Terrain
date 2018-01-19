@@ -1,4 +1,6 @@
+<font color="#51e549">
 Terrain Generator
+</font>
 =======
 Small Terrain Generator, side project, will become part of a bigger one.
 Using the fantastic "rlutil" library.
