@@ -116,7 +116,7 @@ char typem[3][50] = {"Placeholder", "Goblin", "Bandit"};
     
     default:
     printf("Common mob!\n");
-    mob1.atk = player1.atk/(rand() % 3+2);
+    mob1.atk = rand() % player1.atk+2;
     mob1.def = 0;
     mob1.hp = rand() % 20+5;
     getch();
