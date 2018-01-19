@@ -1,5 +1,5 @@
 <font color="#51e549">
-Terrain Generator
+    <h1>Terrain Generator</h1>
 </font>
 =======
 Small Terrain Generator, side project, will become part of a bigger one.
