@@ -30,12 +30,10 @@ void patk(php, ehp)
     if (ehp <= 0)
     {
         setColor(10);
-        printf("\n\nMob Defeated!");
+        printf("\n\n%s %s Defeated!", mob1.tname, mob1.ename);
         resetColor();
         int xpearn = mob1.atk+mob1.def+mob1.hp;
         playerlevel(xpearn);
-        
-        return;
     }
 }
 
@@ -65,15 +63,22 @@ void matk(php, ehp)
 void playerlevel(xpearn)
 {
     player1.xp = player1.xp + xpearn;
+    int needxp = ((100+(10*player1.lvl))-player1.xp);
     printf("\n%s earned %i XP!", player1.name, xpearn);
     printf("\nTotal XP is %i.", player1.xp);
+    printf("\nYou need another %i XP to level up.", needxp);
     save();
-    if (player1.xp >= 100)
+    if (player1.xp >= (100+(10*player1.lvl)))
     {
         player1.lvl++;
         printf("\nLevel Up! Player level is now %i.", player1.lvl);
-        player1.xp = player1.xp - 100;
+        player1.xp = player1.xp - (100+(10*(player1.lvl-1)));
         statup();
+    }
+    else 
+    {
+        getch();
+        init();
     }
     
 }
