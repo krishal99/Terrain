@@ -13,7 +13,7 @@ I guess the current version is something like 1.45b, since the core functionalit
 
 For now I think I'll start on further expanding the mob generator and improving the battle system... but first the mob generator has to be good, and have more variety.
 
-After the battle system, I will start working on hard coded bosses and levelling up, possibly an inventory system.
+After the battle system, I will start working on proper hard coded bosses and possibly an inventory system.
 
 This is more like a note to myself, but some sounds would be nice (a bwaah at a boss fight, something friendly in a village/ town etc). I'm assuming it'll have to be 8 bit but that has its own charm... damn I should really research this since I completely forgot about wanting to implement that.
 <font color="#ff0000">
